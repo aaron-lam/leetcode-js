@@ -3,7 +3,7 @@ const threeSum = (nums) => {
   if (!nums || nums.length < 3) {
     return res;
   }
-  nums = nums.sort((a, b) => a - b);
+  nums.sort((a, b) => a - b);
   for (let i = 0; i < nums.length - 2; i++) {
     if (nums[i] > 0) {
       return res;
