@@ -1,21 +1,4 @@
-// recursive
-const levelOrder = (root) => {
-  const res = [];
-  preOrder(root, res, 0);
-  return res;
-};
-
-const preOrder = (node, res, level) => {
-  if (!node) {
-    return;
-  }
-  res[level] = res[level] || [];
-  res[level].push(node.val);
-  preOrder(node.left, res, level + 1);
-  preOrder(node.right, res, level + 1);
-};
-
-// iterative
+// BFS approach
 const levelOrder = (root) => {
   const res = [];
   if (!root) {
@@ -25,7 +8,7 @@ const levelOrder = (root) => {
   while (queue.length) {
     let len = queue.length;
     const list = [];
-    while (len) {
+    for (let i = 0; i < len; i++) {
       const node = queue.shift();
       list.push(node.val);
       if (node.left) {
@@ -34,9 +17,25 @@ const levelOrder = (root) => {
       if (node.right) {
         queue.push(node.right);
       }
-      len -= 1;
     }
     res.push(list);
   }
   return res;
+};
+
+// DFS approach
+const levelOrder = (root) => {
+  const res = [];
+  levelTraverse(root, res, 0);
+  return res;
+};
+
+const levelTraverse = (node, res, level) => {
+  if (!node) {
+    return;
+  }
+  res[level] = res[level] || [];
+  res[level].push(node.val);
+  levelTraverse(node.left, res, level + 1);
+  levelTraverse(node.right, res, level + 1);
 };
