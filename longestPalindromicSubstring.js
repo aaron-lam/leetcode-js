@@ -1,17 +1,25 @@
-var longestPalindrome = function(s) {
-  var max = '';
-  for (var i = 0; i < s.length; i++) {
-    for (var j = 0; j < 2; j++) {
-      var left = i;
-      var right = i + j;
-      while (s[left] && s[left] === s[right]) {
-        left--;
-        right++;
-      }
-      if ((right - left - 1) > max.length) {
-        max = s.substring(left + 1, right);
-      }
-    }
+const longestPalindrome = (s) => {
+  if (!s || !s.length) {
+    return "";
   }
-  return max;
+  let startIdx = 0;
+  let len = 0;
+
+  const extendPalindrome = (start, end) => {
+    while (start >= 0 && end < s.length && s[start] === s[end]) {
+      start -= 1;
+      end += 1;
+    }
+    if (len < end - start - 1) {
+      startIdx = start + 1;
+      len = end - start - 1;
+    }
+  };
+
+  for (let i = 0; i < s.length; i++) {
+    extendPalindrome(i, i);
+    extendPalindrome(i, i + 1);
+  }
+
+  return s.substring(startIdx, startIdx + len);
 };
