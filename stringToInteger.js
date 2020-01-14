@@ -1,29 +1,20 @@
 const myAtoi = (str) => {
-  if (!str) {
-    return 0;
-  }
-  str = str.trim();
-  if (!str.length) {
-    return 0;
-  }
-  let sign = 1, i = 0, res = 0;
-  if (str[i] === '+') {
-    sign = 1;
-    i += 1;
-  } else if (str[i] === '-') {
-    sign = - 1;
+  const MAX = Math.pow(2, 31) - 1;
+  let res = 0;
+  let i = 0;
+  while (str[i] === ' ') {
     i += 1;
   }
-  for (; i < str.length; i++) {
-    let temp = str.charCodeAt(i) - 48;
-    if (temp > 9 || temp < 0) {
-      break;
+  let sign = 1;
+  if (str[i] === '+' || str[i] === '-') {
+    sign = str[i++] === '+' ? 1 : -1;
+  }
+  while (str[i] !== " " && !isNaN(str[i])) {
+    if (res > Math.trunc(MAX / 10) ||
+      (res === Math.trunc(MAX / 10) && Number(str[i]) > 7)) {
+      return (sign === 1) ? MAX : -MAX - 1;
     }
-    if (res > 2147483647 / 10 ||
-      res > (2147483647 - temp) / 10) {
-      return (sign === 1) ? 2147483647: -2147483648;
-    }
-    res = res * 10 + temp;
+    res = res * 10 + Number(str[i++]);
   }
   return res * sign;
 };
