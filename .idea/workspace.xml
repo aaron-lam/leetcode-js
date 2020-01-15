@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b007e63-d62f-4811-a8cf-fc23635277c8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/findTheCelebrity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/medianOfTwoSortedArrays.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pascal'sTriangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zigZagConversion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/majorityElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nestedListWeightSum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nestedListWeightSumII.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallsAndGates.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addTwoNumbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/addTwoNumbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bullsAndCows.js" beforeDir="false" afterPath="$PROJECT_DIR$/bullsAndCows.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/containerWithMostWater.js" beforeDir="false" afterPath="$PROJECT_DIR$/containerWithMostWater.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstMissingPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/firstMissingPositive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasStation.js" beforeDir="false" afterPath="$PROJECT_DIR$/gasStation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/longestPalindromicSubstring.js" beforeDir="false" afterPath="$PROJECT_DIR$/longestPalindromicSubstring.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/longestSubstringWithoutRepeatingCharacters.js" beforeDir="false" afterPath="$PROJECT_DIR$/longestSubstringWithoutRepeatingCharacters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palindromeNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/palindromeNumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/removeDuplicatesFromSortedArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/removeDuplicatesFromSortedArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/removeDuplicatesFromSortedArrayII.js" beforeDir="false" afterPath="$PROJECT_DIR$/removeDuplicatesFromSortedArrayII.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/removeElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/removeElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverseInteger.js" beforeDir="false" afterPath="$PROJECT_DIR$/reverseInteger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotateArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/rotateArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stringToInteger.js" beforeDir="false" afterPath="$PROJECT_DIR$/stringToInteger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoSum.js" beforeDir="false" afterPath="$PROJECT_DIR$/twoSum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numberOfIslands.js" beforeDir="false" afterPath="$PROJECT_DIR$/numberOfIslands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surroundedRegions.js" beforeDir="false" afterPath="$PROJECT_DIR$/surroundedRegions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,9 +117,9 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="229" y="74" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1578941392868" />
-    <state x="385" y="172" width="670" height="676" key="search.everywhere.popup" timestamp="1578974071344">
+    <state x="385" y="172" width="670" height="676" key="search.everywhere.popup" timestamp="1579039850978">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state x="385" y="172" width="670" height="676" key="search.everywhere.popup/0.23.1440.825@0.23.1440.825" timestamp="1578974071344" />
+    <state x="385" y="172" width="670" height="676" key="search.everywhere.popup/0.23.1440.825@0.23.1440.825" timestamp="1579039850978" />
   </component>
 </project>
