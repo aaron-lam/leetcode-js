@@ -1,17 +1,11 @@
-const hIndex = (citations) => {
-  if (!citations || !citations.length) {
-    return 0;
+function hIndex(citations) {
+  const n = citations.length;
+  let start = 0, end = n - 1;
+  while (start <= end) {
+    const mid = Math.trunc((end - start) / 2) + start;
+    if (citations[mid] == n - mid) return n - mid;
+    else if (citations[mid] > n - mid) end = mid - 1;
+    else start = mid + 1;
   }
-  let n = citations.length, left = 0, right = n - 1;
-  while (left <= right) {
-    const mid = Math.floor((right - left) / 2) + left;
-    if (citations[mid] === (n - mid)) {
-      return citations[mid];
-    } else if (citations[mid] > (n - mid)) {
-      right = mid - 1;
-    } else {
-      left = mid + 1;
-    }
-  }
-  return n - (right + 1);
-};
+  return n - start;
+}
