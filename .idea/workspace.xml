@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b007e63-d62f-4811-a8cf-fc23635277c8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/majorityElementII.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shortestWordDistance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shortestWordDistanceII.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h-Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/h-Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h-IndexII.js" beforeDir="false" afterPath="$PROJECT_DIR$/h-IndexII.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/n-Queens.js" beforeDir="false" afterPath="$PROJECT_DIR$/n-Queens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordLadder.js" beforeDir="false" afterPath="$PROJECT_DIR$/wordLadder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,9 +113,10 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="229" y="74" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1578941392868" />
-    <state x="385" y="172" width="670" height="676" key="search.everywhere.popup" timestamp="1579112202048">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="385" y="172" width="670" height="678" key="search.everywhere.popup" timestamp="1579219352389">
+      <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="385" y="172" width="670" height="676" key="search.everywhere.popup/0.23.1440.825@0.23.1440.825" timestamp="1579112202048" />
+    <state x="385" y="172" width="670" height="678" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1579219352389" />
   </component>
 </project>

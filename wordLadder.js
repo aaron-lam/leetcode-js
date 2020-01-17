@@ -1,36 +1,33 @@
-const ladderLength = (beginWord, endWord, wordList) => {
+function ladderLength(beginWord, endWord, wordList) {
   let len = 1;
-  let queue = [beginWord];
-  // put wordList into a set for time optimization
+  let q = [beginWord];
   const dict = new Set(wordList);
-  // need a set for recording visited word
   const visited = new Set();
-  // add beginWord to visited
   visited.add(beginWord);
-  while (queue.length) {
+  while (q.length) {
     const nextLevel = [];
-    for (let word of queue) {
-      if (word === endWord) {
+    for (const word of q) {
+      if (word == endWord) {
         return len;
       }
       const splitWord = word.split("");
       for (let i = 0; i < splitWord.length; i++) {
         for (let c = 0; c < 26; c++) {
           splitWord[i] = String.fromCharCode(97 + c);
-          const joinedWord = splitWord.join("");
-          if (!visited.has(joinedWord) && dict.has(joinedWord)) {
-            nextLevel.push(joinedWord);
-            visited.add(joinedWord);
+          const joinWord = splitWord.join("");
+          if (!visited.has(joinWord) && dict.has(joinWord)) {
+            nextLevel.push(joinWord);
+            visited.add(joinWord);
           }
           splitWord[i] = word[i];
         }
       }
     }
-    queue = nextLevel;
+    q = nextLevel;
     len += 1;
   }
   return 0;
-};
+}
 
 const ladderLength = (beginWord, endWord, wordList) => {
   const dict = new Set(wordList);
