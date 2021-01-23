@@ -1,6 +1,6 @@
-// top-down approach
+// Solution 1: top-down approach
 const isBalanced = (root) => {
-  if (!root) {
+  if (root == null) {
     return true;
   }
   const left = depth(root.left);
@@ -9,13 +9,13 @@ const isBalanced = (root) => {
 };
 
 const depth = (root) => {
-  if (!root) {
+  if (root == null) {
     return 0;
   }
   return Math.max(depth(root.left), depth(root.right)) + 1;
 };
 
-// bottom-up approach
+// Solution 2: bottom-up approach
 const isBalanced = (root) => {
   return dfs(root) !== -1;
 };
@@ -29,10 +29,7 @@ const dfs = (root) => {
     return -1;
   }
   const right = dfs(root.right);
-  if (right === -1) {
-    return -1;
-  }
-  if (Math.abs(left - right) > 1) {
+  if (right === -1 || Math.abs(left - right) > 1) {
     return -1;
   }
   return Math.max(left, right) + 1;

@@ -1,4 +1,4 @@
-// recursive
+// Solution 1: recursive
 const inorderTraversal = (root) => {
   const res = [];
   inorder(root, res);
@@ -6,7 +6,7 @@ const inorderTraversal = (root) => {
 };
 
 const inorder = (root, res) => {
-  if (!root) {
+  if (root == null) {
     return;
   }
   inorder(root.left, res);
@@ -14,7 +14,7 @@ const inorder = (root, res) => {
   inorder(root.right, res);
 };
 
-// iterative
+// Solution 2: iterative
 const inorderTraversal = (root) => {
   const stack = [];
   const res = [];

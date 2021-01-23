@@ -1,5 +1,5 @@
 const addStrings = (num1, num2) => {
-  if (!num1 || !num2 || !num1.length || !num2.length) {
+  if (num1 == null || num2 == null || num1.length === 0 || num2.length === 0) {
     return "0";
   }
   let carry = 0;
@@ -17,5 +17,3 @@ const addStrings = (num1, num2) => {
   }
   return res.join("");
 };
-
-console.log(addStrings("12", "243"));

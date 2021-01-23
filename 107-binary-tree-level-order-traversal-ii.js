@@ -1,20 +1,20 @@
 // BFS approach
 const levelOrderBottom = (root) => {
+  if (root == null) {
+    return [];
+  }
   const queue = [];
   const res = [];
-  if (!root) {
-    return res;
-  }
   queue.push(root);
-  while (queue.length) {
+  while (queue.length > 0) {
     const levelNum = queue.length;
     const subList = [];
     for (let i = 0; i < levelNum; i++) {
       const node = queue.shift();
-      if (node.left) {
+      if (node.left != null) {
         queue.push(node.left);
       }
-      if (node.right) {
+      if (node.right != null) {
         queue.push(node.right);
       }
       subList.push(node.val);
@@ -25,22 +25,18 @@ const levelOrderBottom = (root) => {
 };
 
 // DFS approach
-const zigzagLevelOrder = (root) => {
+const levelOrderBottom = (root) => {
   const res = [];
   levelTraverse(res, root, 0);
   return res;
 };
 
 const levelTraverse = (res, root, level) => {
-  if (!root) {
+  if (root == null) {
     return;
   }
-  res[level] = res[level] || [];
+  res[level] = res[level] ?? [];
   levelTraverse(res, root.left, level + 1);
   levelTraverse(res, root.right, level + 1);
-  if (level % 2 === 0) {
-    res[level].push(root.val);
-  } else {
-    res[level].unshift(root.val);
-  }
+  res[level].push(root.val);
 };

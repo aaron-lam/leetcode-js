@@ -1,5 +1,5 @@
 const arrayPairSum = (nums) => {
-  if (!nums || !nums.length) {
+  if (nums == null || nums.length === 0) {
     return 0;
   }
   let res = 0;

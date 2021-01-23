@@ -1,8 +1,8 @@
 const fourSum = (nums, target) => {
-  let res = [];
   if (!nums || nums.length < 4) {
-    return res;
+    return [];
   }
+  const res = [];
   nums.sort((a, b) => a - b);
   for (let i = 0; i < nums.length - 3; i++) {
     if (i > 0 && nums[i] === nums[i - 1]) {

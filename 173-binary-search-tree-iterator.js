@@ -16,7 +16,7 @@ class BSTIterator {
   }
 
   pushAll(node) {
-    while (node) {
+    while (node != null) {
       this.stack.push(node);
       node = node.left;
     }
