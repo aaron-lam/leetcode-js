@@ -1,1 +1,1 @@
-# Leetcode with JavaScript
+# Leetcode in JavaScript
