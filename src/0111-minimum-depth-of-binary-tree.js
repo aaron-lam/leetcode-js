@@ -1,4 +1,4 @@
-// recursive
+// Solution 1: recursive
 const minDepth = (root) => {
   if (!root) {
     return 0;
@@ -12,17 +12,17 @@ const minDepth = (root) => {
   return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
 };
 
-// iterative
+// Solution 2: iterative
 const minDepth = (root) => {
-  if (!root) {
+  if (root == null) {
     return 0;
   }
   const queue = [root];
   let depth = 1;
-  while (queue.length) {
-    for (let size = queue.length; size > 0; size--) {
+  while (queue.length > 0) {
+    for (let i = 0; i < queue.length; i++) {
       const node = queue.shift();
-      if (!node.left && !node.right) {
+      if (node.left == null && node.right == null) {
         return depth;
       }
       if (node.left) {
