@@ -13,12 +13,14 @@ const isAlienSorted = (words, order) => {
   return true;
 };
 
-const isGreater = (s1, s2, rank) => {
-  const m = s1.length;
-  const n = s2.length;
+const isGreater = (word1, word2, rank) => {
+  const m = word1.length;
+  const n = word2.length;
   for (let i = 0; i < Math.min(m, n); i++) {
-    if (s1[i] !== s2[i]) {
-      return rank[toAlphabetIndex(s1[i])] > rank[toAlphabetIndex(s2[i])];
+    const rank1 = rank[toAlphabetIndex(word1[i])];
+    const rank2 = rank[toAlphabetIndex(word2[i])];
+    if (rank1 !== rank2) {
+      return rank1 > rank2;
     }
   }
   return m > n;
