@@ -25,12 +25,12 @@ const canPermutePalindrome = (s) => {
     return true;
   }
   const set = new Set();
-  for (c of s.split("")) {
+  for (const c of s.split("")) {
     if (!set.has(c)) {
       set.add(c);
     } else {
       set.delete(c);
     }
   }
-  return set.size === 0 || set.size === 1;
+  return set.size <= 1;
 };
