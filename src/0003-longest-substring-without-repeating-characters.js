@@ -1,30 +1,21 @@
 // Solution 1: window substring
-const updateMapValue = (map, key, value) => map.set(key, (map.get(key) ?? 0) + value);
-
-const incrementMapValue = (map, key) => updateMapValue(map, key, 1);
-
-const decrementMapValue = (map, key) => updateMapValue(map, key, -1);
-
 const lengthOfLongestSubstring = (s) => {
-  if (s == null || s.length === 0) {
-    return 0;
-  }
-  let start = 0, maxLen = 0;
-  const freqCounts = new Map();
-  for (let end = 0; end < s.length; end++) {
-    incrementMapValue(freqCounts, s.charAt(end));
-    while (freqCounts.get(s.charAt(end)) > 1) {
-      decrementMapValue(freqCounts, s.charAt(start));
+  const set = new Set();
+  let res = 0;
+  for (let end = 0, start = 0; end < s.length; end++) {
+    while (set.has(s[end])) {
+      set.delete(s[start]);
       start += 1;
     }
-    maxLen = Math.max(maxLen, end - start + 1);
+    set.add(s[end]);
+    res = Math.max(res, end - start + 1);
   }
-  return maxLen;
+  return res;
 }
 
 // Solution 2: using Array.reduce()
 const lengthOfLongestSubstring2 = (s) => {
-  if (!s || s.length === 0) {
+  if (s == null || s.length === 0) {
     return 0;
   }
   let start = 0;
