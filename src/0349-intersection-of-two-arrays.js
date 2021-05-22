@@ -1,11 +1,8 @@
 const intersection = (nums1, nums2) => {
-  const set = new Set();
-  for (const num of nums1) {
-    set.add(num);
-  }
+  const set1 = new Set(nums1);
   const res = new Set();
   for (const num of nums2) {
-    if (set.has(num)) {
+    if (set1.has(num)) {
       res.add(num);
     }
   }
