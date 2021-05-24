@@ -1,14 +1,10 @@
 const twoSum = (nums, target) => {
-  if (nums == null || nums.length === 0) {
-    throw new Error("Target not found");
-  }
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    const diff = target - nums[i];
-    if (map.has(diff)) {
-      return [map.get(diff), i];
+    if (map.has(target - nums[i])) {
+      return [map.get(target - nums[i]), i];
     }
     map.set(nums[i], i);
   }
-  throw new Error("Target not found");
+  return [-1, -1];
 }
