@@ -1,26 +1,20 @@
 const groupStrings = (strings) => {
-  if (strings == null || strings.length === 0) {
-    return [];
-  }
   const map = new Map();
-  for (const string of strings) {
-    const seq = getSequence(string);
-    if (!map.has(seq)) {
-      map.set(seq, []);
-    }
-    map.get(seq).push(string);
+  for (const s of strings) {
+    const seq = getSeq(s);
+    map.set(seq, (map.get(seq) ?? []).concat(s));
   }
   return [...map.values()];
-};
+}
 
-const getSequence = (string) => {
-  let sequence = "";
-  for (let i = 0 ; i < string.length - 1; i++) {
-    let diff = string[i + 1].charCodeAt(0) - string[i].charCodeAt(0);
+const getSeq = (s) => {
+  const seq = [];
+  for (let i = 0; i < s.length - 1; i++) {
+    let diff = s[i + 1].charCodeAt(0) - s[i].charCodeAt(0);
     if (diff < 0) {
       diff += 26;
     }
-    sequence += diff + "-";
+    seq.push(diff);
   }
-  return sequence;
+  return seq.join("-");
 }

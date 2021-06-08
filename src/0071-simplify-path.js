@@ -3,17 +3,16 @@ const simplifyPath = (path) => {
     return "/";
   }
   const pathArr = path.split("/");
-  const simplifiedPath = []; 
+  const stack = [];
   for (const subPath of pathArr) {
-    if (subPath.length === 0 || subPath === ".") {
+    if (subPath === "" || subPath === ".") {
       continue;
-    } else if (subPath === "..") {
-      if (simplifiedPath.length > 0) {
-        simplifiedPath.pop();
-      }
+    }
+    if (subPath === "..") {
+      stack.pop();
     } else {
-      simplifiedPath.push(subPath);
+      stack.push(subPath);
     }
   }
-  return "/" + simplifiedPath.join("/");
+  return "/" + stack.join("/");
 };
