@@ -1,20 +1,23 @@
-const groupStrings = (strings) => {
-  const map = new Map();
-  for (const s of strings) {
-    const seq = getSeq(s);
-    map.set(seq, (map.get(seq) ?? []).concat(s));
-  }
-  return [...map.values()];
-}
-
-const getSeq = (s) => {
+const getSeq = (str) => {
   const seq = [];
-  for (let i = 0; i < s.length - 1; i++) {
-    let diff = s[i + 1].charCodeAt(0) - s[i].charCodeAt(0);
-    if (diff < 0) {
-      diff += 26;
-    }
-    seq.push(diff);
+  for (let i = 0; i < str.length - 1; i++) {
+    const first = str[i].charCodeAt(0);
+    const second = str[i + 1].charCodeAt(0);
+    const diff = second - first;
+    seq.push(diff + ((diff < 0) ? 26 : 0));
   }
   return seq.join("-");
-}
+};
+
+const groupStrings = function(strings) {
+  const map = new Map();
+  for (const str of strings) {
+    const seq = getSeq(str);
+    if (map.has(seq)) {
+      map.get(seq).push(str);
+    } else {
+      map.set(seq, [str]);
+    }
+  }
+  return [...map.values()];
+};

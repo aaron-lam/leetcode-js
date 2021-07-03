@@ -1,12 +1,12 @@
 const groupAnagrams = (strs) => {
   const map = new Map();
-  for (const s of strs) {
-    const sortedS = s.split("").sort().join("");
-    if (map.has(sortedS)) {
-      map.get(sortedS).push(s);
+  for (const str of strs) {
+    const sortedStr = str.split("").sort().join("");
+    if (map.has(sortedStr)) {
+      map.get(sortedStr).push(str);
     } else {
-      map.set(sortedS, [s]);
+      map.set(sortedStr, [str]);
     }
   }
-  return Array.from(map.entries()).map((e) => e[1]);
+  return [...map.values()];
 };
