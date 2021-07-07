@@ -18,4 +18,4 @@ const extendPalindrome = (s, start, end) => {
     length += 1;
   }
   return length;
-}
+};

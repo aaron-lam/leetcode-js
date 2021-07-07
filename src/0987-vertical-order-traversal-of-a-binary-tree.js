@@ -19,4 +19,4 @@ const dfs = (root, nodes, x, y) => {
   dfs(root.left, nodes, x - 1, y - 1);
   nodes.push([x, y, root.val]);
   dfs(root.right, nodes, x + 1, y - 1);
-}
+};

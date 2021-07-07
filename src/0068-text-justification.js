@@ -13,12 +13,12 @@ const findEnd = (start, words, maxWidth) => {
   let end = start;
   let sum = words[end].length;
   end += 1;
-  while (end < words.length && (sum + 1 + words[end].length) <= maxWidth) {
+  while (end < words.length && sum + 1 + words[end].length <= maxWidth) {
     sum += 1 + words[end].length;
     end += 1;
   }
   return end - 1;
-}
+};
 
 const justify = (start, end, words, maxWidth) => {
   if (end - start === 0) {
@@ -37,7 +37,7 @@ const justify = (start, end, words, maxWidth) => {
     spacesRemainder -= 1;
   }
   return padResult(res.join("").trim(), maxWidth);
-}
+};
 
 const padResult = (res, maxWidth) => res + " ".repeat(maxWidth - res.length);
 
@@ -47,4 +47,4 @@ const wordsLength = (start, end, words) => {
     res += words[i].length;
   }
   return res;
-}
+};

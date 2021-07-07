@@ -1,5 +1,6 @@
 const dfs = (root, res) => {
-  let edge1 = 0, edge2 = 0;
+  let edge1 = 0,
+    edge2 = 0;
   for (const neighbor of root.children) {
     const depth = dfs(neighbor, res);
     if (depth > edge1) {
@@ -11,4 +12,4 @@ const dfs = (root, res) => {
   }
   res[0] = Math.max(res[0], edge1 + edge2);
   return edge1 + 1;
-}
+};

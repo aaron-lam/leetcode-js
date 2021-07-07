@@ -8,7 +8,8 @@ const threeSum = (nums) => {
     if (i > 0 && nums[i] === nums[i - 1]) {
       continue;
     }
-    let start = i + 1, end = nums.length - 1;
+    let start = i + 1,
+      end = nums.length - 1;
     while (start < end) {
       const sum = nums[i] + nums[start] + nums[end];
       if (sum === 0) {

@@ -7,11 +7,12 @@ const mySqrt = (x) => {
       return i - 1;
     }
   }
-  return - 1;
+  return -1;
 };
 
 const mySqrt = (x) => {
-  let left = 1, right = x;
+  let left = 1,
+    right = x;
   while (left <= right) {
     const mid = Math.floor((right - left) / 2) + left;
     if (mid === x / mid) {

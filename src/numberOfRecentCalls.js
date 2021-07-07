@@ -1,5 +1,4 @@
 class RecentCounter {
-
   constructor() {
     this.queue = [];
   }

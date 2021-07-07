@@ -1,6 +1,5 @@
 // dfs approach
 const maxAreaOfIsland = (grid) => {
-
   const dfs = (i, j) => {
     if (i < 0 || i >= m || j < 0 || j >= n || !grid[i][j]) {
       return 0;
@@ -13,7 +12,8 @@ const maxAreaOfIsland = (grid) => {
     return 0;
   }
   let maxArea = 0;
-  const m = grid.length, n = grid[0].length;
+  const m = grid.length,
+    n = grid[0].length;
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       if (grid[i][j] === 1) {
@@ -26,7 +26,6 @@ const maxAreaOfIsland = (grid) => {
 
 // bfs approach
 const maxAreaOfIsland = (grid) => {
-
   const bfs = (i, j) => {
     let area = 0;
     const queue = [[i, j]];
@@ -50,8 +49,14 @@ const maxAreaOfIsland = (grid) => {
     return 0;
   }
   let maxArea = 0;
-  const m = grid.length, n = grid[0].length;
-  const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+  const m = grid.length,
+    n = grid[0].length;
+  const directions = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       if (grid[i][j]) {

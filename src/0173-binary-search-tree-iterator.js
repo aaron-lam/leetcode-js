@@ -1,5 +1,4 @@
 class BSTIterator {
-
   constructor(root) {
     this.stack = [];
     this.pushAll(root);

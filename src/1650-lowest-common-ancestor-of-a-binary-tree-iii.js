@@ -16,7 +16,8 @@ const lowestCommonAncestor = (p, q) => {
 
 // Solution 2: Cycle
 const lowestCommonAncestor = (p, q) => {
-  let pCur = p, qCur = q;
+  let pCur = p,
+    qCur = q;
   while (pCur !== qCur) {
     pCur = pCur == null ? q : pCur.parent;
     qCur = qCur == null ? p : qCur.parent;

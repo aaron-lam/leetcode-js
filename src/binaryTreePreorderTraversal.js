@@ -11,7 +11,7 @@ const preorder = (root, res) => {
   }
   res.add(root.val);
   preorder(root.left, res);
-  preorder(root.right, res)
+  preorder(root.right, res);
 };
 
 // iterative

@@ -11,7 +11,7 @@ const buildPairsMap = (similarPairs) => {
     map.get(word2).add(word1);
   }
   return map;
-}
+};
 
 const areSentencesSimilar = (sentence1, sentence2, similarPairs) => {
   if (sentence1 == null || sentence2 == null) {

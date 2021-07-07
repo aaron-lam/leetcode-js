@@ -18,7 +18,7 @@ const dfs = (digits, res, cur, len) => {
     return;
   }
   const s = map[digits.charAt(len)];
-  s.split('').forEach(character => {
+  s.split("").forEach((character) => {
     dfs(digits, res, cur + character, len + 1);
   });
 };
@@ -36,7 +36,7 @@ const letterCombinations2 = (digits) => {
     const x = Number(digits.charAt(i));
     while (res[res.length - 1].length === i) {
       const t = res.pop();
-      map[x].split('').forEach(s => {
+      map[x].split("").forEach((s) => {
         res.unshift(t + s);
       });
     }

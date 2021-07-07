@@ -6,7 +6,7 @@ const toStack = (head) => {
     cur = cur.next;
   }
   return stack;
-}
+};
 
 const isPalindrome = (head) => {
   if (head == null) {

@@ -1,6 +1,6 @@
 const merge = (nums1, m, nums2, n) => {
   if (!nums1 || !nums2) {
-    return (nums1) ? nums1 : nums2;
+    return nums1 ? nums1 : nums2;
   }
   let idx = m + n - 1;
   m -= 1;

@@ -1,10 +1,9 @@
 class RandomizedSet {
-  
   constructor() {
     this.nums = [];
     this.map = new Map();
   }
-  
+
   insert(val) {
     if (this.map.has(val)) {
       return false;
@@ -13,7 +12,7 @@ class RandomizedSet {
     this.nums.push(val);
     return true;
   }
-  
+
   remove(val) {
     if (!this.map.has(val)) {
       return false;
@@ -28,7 +27,7 @@ class RandomizedSet {
     this.nums.pop();
     return true;
   }
-  
+
   getRandom() {
     const randomIndex = Math.floor(Math.random() * this.nums.length);
     return this.nums[randomIndex];

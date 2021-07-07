@@ -20,4 +20,4 @@ const build = (s) => {
     res.push(val);
   }
   return res;
-}
+};

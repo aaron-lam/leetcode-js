@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint . --fix --max-warnings=0"
+    "lint": "eslint . --fix & prettier --write \"src/*.js\""
   },
   "devDependencies": {
     "eslint": "^7.30.0",

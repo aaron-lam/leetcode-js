@@ -8,7 +8,6 @@ class Node {
 }
 
 class LRUCache {
-
   addNode(node) {
     node.next = this.head.next;
     node.prev = this.head;

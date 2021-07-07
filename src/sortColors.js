@@ -2,7 +2,8 @@ const sortColors = (nums) => {
   if (!nums || nums.length < 2) {
     return nums;
   }
-  let start = 0, end = nums.length - 1;
+  let start = 0,
+    end = nums.length - 1;
   let idx = 0;
   while (idx <= end) {
     if (nums[idx] === 0) {

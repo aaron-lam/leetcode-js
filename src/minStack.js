@@ -1,11 +1,10 @@
 class MinStack {
-
   constructor() {
     this.stack = [];
   }
 
   push(x) {
-    const min = (this.stack.length) ? this.stack[this.stack.length - 1][1] : x;
+    const min = this.stack.length ? this.stack[this.stack.length - 1][1] : x;
     this.stack.push([x, Math.min(x, min)]);
   }
 

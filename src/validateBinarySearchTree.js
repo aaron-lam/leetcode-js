@@ -11,8 +11,7 @@ const traverse = (root, lowerBound, upperBound) => {
   if (root.val <= lowerBound || root.val >= upperBound) {
     return false;
   }
-  return traverse(root.left, lowerBound, root.val) &&
-    traverse(root.right, root.val, upperBound);
+  return traverse(root.left, lowerBound, root.val) && traverse(root.right, root.val, upperBound);
 };
 
 // iterative

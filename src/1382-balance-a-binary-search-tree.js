@@ -16,7 +16,7 @@ const traverse = (root, list) => {
   traverse(root.left, list);
   list.push(root.val);
   traverse(root.right, list);
-}
+};
 
 const sortedListToBST = (list, start, end) => {
   if (start > end) {
@@ -27,4 +27,4 @@ const sortedListToBST = (list, start, end) => {
   root.left = sortedListToBST(list, start, mid - 1);
   root.right = sortedListToBST(list, mid + 1, end);
   return root;
-}
+};

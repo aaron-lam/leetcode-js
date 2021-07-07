@@ -1,8 +1,8 @@
 import { ListNode } from "./ListNode";
 
-const getVal = (node) => node != null ? node.val : 0;
+const getVal = (node) => (node != null ? node.val : 0);
 
-const getNext = (node) => node != null ? node.next : null;
+const getNext = (node) => (node != null ? node.next : null);
 
 const addTwoNumbers = (l1, l2) => {
   const dummy = new ListNode();

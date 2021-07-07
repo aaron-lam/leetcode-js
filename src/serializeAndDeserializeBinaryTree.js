@@ -34,7 +34,7 @@ const deserialize = (data) => {
       q.push(left);
     }
     i += 1;
-    if (values[i] !== 'x') {
+    if (values[i] !== "x") {
       const right = new TreeNode(Number(values[i]));
       parent.right = right;
       q.push(right);

@@ -2,7 +2,7 @@ const merge = (intervals) => {
   if (!intervals || !intervals.length) {
     return [];
   }
-  intervals.sort((a, b) => (a[0] !== b[0]) ? a[0] - b[0] : a[1] - b[1]);
+  intervals.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]));
   let prev = intervals[0];
   let res = [prev];
   for (const interval of intervals) {

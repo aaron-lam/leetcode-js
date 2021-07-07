@@ -16,8 +16,8 @@ const wordBreak = function (s, wordDict, map = {}) {
       if (!values.length && newStr.length === 0) {
         result.push(word);
       } else {
-        values.forEach(val => {
-          result.push(word + ' ' + val);
+        values.forEach((val) => {
+          result.push(word + " " + val);
         });
       }
     }

@@ -11,9 +11,11 @@ const arraysIntersection = (arr1, arr2, arr3) => {
   return res;
 };
 
-// Solution 2: 
+// Solution 2:
 const arraysIntersection = (arr1, arr2, arr3) => {
-  let i1 = 0, i2 = 0, i3 = 0;
+  let i1 = 0,
+    i2 = 0,
+    i3 = 0;
   const res = [];
   while (i1 < arr1.length && i2 < arr2.length && i3 < arr3.length) {
     if (arr1[i1] === arr2[i2] && arr2[i2] === arr3[i3]) {
@@ -25,7 +27,7 @@ const arraysIntersection = (arr1, arr2, arr3) => {
       i1 += 1;
     } else if (arr2[i2] < arr3[i3]) {
       i2 += 1;
-    } else  {
+    } else {
       i3 += 1;
     }
   }

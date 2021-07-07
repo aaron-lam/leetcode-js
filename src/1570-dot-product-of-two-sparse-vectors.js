@@ -7,7 +7,7 @@ class SparseVector {
       }
     });
   }
-  
+
   dotProduct(vec) {
     let res = 0;
     for (const [key, value] of vec.map.entries()) {

@@ -3,9 +3,9 @@ const isValid = (s) => {
     return true;
   }
   const map = {
-    ")" : "(",
-    "}" : "{",
-    "]" : "["
+    ")": "(",
+    "}": "{",
+    "]": "[",
   };
   const stack = [];
   for (const bracket of s.split("")) {

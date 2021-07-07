@@ -13,7 +13,7 @@ const intToRoman = (num) => {
     ["V", 5],
     ["IV", 4],
     ["I", 1],
-  ]
+  ];
   const res = [];
   for (const [roman, val] of romans) {
     while (num >= val) {

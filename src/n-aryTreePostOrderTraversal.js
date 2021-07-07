@@ -9,7 +9,7 @@ const postorder = (root) => {
     }
     res.push(root.val);
     return res;
-  }
+  };
   traverse(root);
   return res;
 };

@@ -3,7 +3,8 @@ const findDuplicate = (nums) => {
   if (!nums || !nums.length) {
     return null;
   }
-  let start = 1, end = nums.length - 1;
+  let start = 1,
+    end = nums.length - 1;
   while (start < end) {
     const mid = Math.floor((end - start) / 2) + start;
     let count = 0;
@@ -25,7 +26,8 @@ const findDuplicate2 = (nums) => {
   if (!nums || !nums.length) {
     return null;
   }
-  let slow = nums[0], fast = nums[slow];
+  let slow = nums[0],
+    fast = nums[slow];
   while (slow !== fast) {
     slow = nums[slow];
     fast = nums[nums[fast]];

@@ -1,5 +1,6 @@
-const minEatingSpeed  = (piles, H) => {
-  let start = 1, end = getMaxPile(piles);
+const minEatingSpeed = (piles, H) => {
+  let start = 1,
+    end = getMaxPile(piles);
   while (start <= end) {
     const mid = Math.trunc((end - start) / 2) + start;
     if (canEatAll(piles, H, mid)) {

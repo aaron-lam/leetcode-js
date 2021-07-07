@@ -19,7 +19,8 @@ const findShortestSubArray = (nums) => {
       map[num].endIdx = i;
     }
   });
-  let degree = Number.MIN_VALUE, res = Number.MAX_VALUE;
+  let degree = Number.MIN_VALUE,
+    res = Number.MAX_VALUE;
   for (const value in map) {
     const val = map[value];
     if (val.degree > degree) {

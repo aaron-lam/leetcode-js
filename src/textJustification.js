@@ -14,7 +14,7 @@ const createLines = (words, maxWidth) => {
     const line = [];
     while (idx < words.length) {
       const peek = words[idx];
-      const peekLen = [...line, peek].join(' ').length;
+      const peekLen = [...line, peek].join(" ").length;
       if (peekLen <= maxWidth) {
         line.push(peek);
         idx += 1;
@@ -31,19 +31,19 @@ const justifyLines = (lines, maxWidth) => {
   const justified = [];
   for (let l = 0; l < lines.length - 1; l++) {
     const line = lines[l];
-    const spaces = (maxWidth - line.join('').length);
+    const spaces = maxWidth - line.join("").length;
     for (let i = 0; i < spaces; i++) {
-      const index = i % ((line.length - 1) || 1);
-      line[index] += ' ';
+      const index = i % (line.length - 1 || 1);
+      line[index] += " ";
     }
-    push(justified, maxWidth, line, '');
+    push(justified, maxWidth, line, "");
   }
-  push(justified, maxWidth, lines[lines.length - 1], ' ');
+  push(justified, maxWidth, lines[lines.length - 1], " ");
   return justified;
 };
 
 const push = (justified, maxWidth, line, space) => {
   const text = line.join(space);
-  const extra = ' '.repeat(maxWidth - text.length);
+  const extra = " ".repeat(maxWidth - text.length);
   justified.push(text + extra);
 };

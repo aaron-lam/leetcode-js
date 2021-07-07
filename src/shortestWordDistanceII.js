@@ -9,7 +9,9 @@ class WordDistance {
   }
 
   shortest(word1, word2) {
-    let i = 0, j = 0, res = Number.POSITIVE_INFINITY;
+    let i = 0,
+      j = 0,
+      res = Number.POSITIVE_INFINITY;
     const list1 = this.map.get(word1);
     const list2 = this.map.get(word2);
     while (i < list1.length && j < list2.length) {

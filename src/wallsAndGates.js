@@ -3,7 +3,8 @@ const wallsAndGates = (rooms) => {
   if (!rooms || !rooms.length || !rooms[0].length) {
     return rooms;
   }
-  const m = rooms.length, n = rooms[0].length;
+  const m = rooms.length,
+    n = rooms[0].length;
   const dfs = (i, j, val) => {
     if (i < 0 || i >= m || j < 0 || j >= n || rooms[i][j] < val) {
       return;
@@ -27,8 +28,14 @@ const wallsAndGates = (rooms) => {
   if (!rooms || !rooms.length || !rooms[0].length) {
     return rooms;
   }
-  const m = rooms.length, n = rooms[0].length;
-  const dirs = [[0, 1], [0, -1], [1, 0], [1, -1]];
+  const m = rooms.length,
+    n = rooms[0].length;
+  const dirs = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [1, -1],
+  ];
   const q = [];
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
@@ -42,9 +49,7 @@ const wallsAndGates = (rooms) => {
     for (const [dx, dy] of dirs) {
       const newX = x + dx;
       const newY = y + dy;
-      if (newX >= 0 && newX < m &&
-        newY >= 0 && newY < newY &&
-        rooms[newX][newY] > rooms[x][y] + 1) {
+      if (newX >= 0 && newX < m && newY >= 0 && newY < newY && rooms[newX][newY] > rooms[x][y] + 1) {
         q.push([newX, newY]);
         rooms[newX][newY] = rooms[x][y] + 1;
       }

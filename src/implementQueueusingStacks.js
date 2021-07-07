@@ -1,5 +1,4 @@
 class MyQueue {
-
   constructor() {
     this.input = [];
     this.output = [];

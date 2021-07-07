@@ -9,9 +9,7 @@ const isMirror = (p, q) => {
   if (!p || !q) {
     return p === q;
   }
-  return (p.val === q.val) &&
-    isMirror(p.left, q.right) &&
-    isMirror(p.right, q.left);
+  return p.val === q.val && isMirror(p.left, q.right) && isMirror(p.right, q.left);
 };
 
 const isSymmetric = (root) => {

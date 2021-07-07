@@ -21,7 +21,7 @@ const buildAccountsGraph = (accounts) => {
     }
   }
   return [graph, emailToName];
-}
+};
 
 const dfs = (graph, email, visitedEmails, emailList) => {
   emailList.push(email);
@@ -31,7 +31,7 @@ const dfs = (graph, email, visitedEmails, emailList) => {
       dfs(graph, nextEmail, visitedEmails, emailList);
     }
   }
-}
+};
 
 const accountsMerge = (accounts) => {
   if (accounts == null || accounts.length === 0) {

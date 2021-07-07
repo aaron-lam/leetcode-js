@@ -23,18 +23,20 @@ const solve = (board) => {
     }
   }
   return true;
-}
+};
 
 const isValid = (board, row, col, num) => {
   const subBoxRow = Math.floor(row / 3) * 3;
   const subBoxCol = Math.floor(col / 3) * 3;
   for (let i = 0; i < 9; i++) {
     const curRow = board[i][col];
-    if (board[i][col] === num
-        || board[row][i] === num
-        || board[subBoxRow + Math.floor(i / 3)][subBoxCol + i % 3] === num) {
+    if (
+      board[i][col] === num ||
+      board[row][i] === num ||
+      board[subBoxRow + Math.floor(i / 3)][subBoxCol + (i % 3)] === num
+    ) {
       return false;
     }
   }
   return true;
-}
+};

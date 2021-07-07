@@ -6,7 +6,7 @@ const getPermutation = (n, k) => {
   for (let i = 1; i <= n; i++) {
     const index = Math.floor(k / factorial[n - i]);
     s += nums[index];
-    nums = nums.filter(n => n !== nums[index]);
+    nums = nums.filter((n) => n !== nums[index]);
     k -= index * factorial[n - i];
   }
   return String(s);

@@ -4,7 +4,8 @@ const diagonalSort = (mat) => {
   if (mat == null || mat.length === 0 || mat[0].length === 0) {
     return mat;
   }
-  const m = mat.length, n = mat[0].length;
+  const m = mat.length,
+    n = mat[0].length;
   const map = new Map();
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {

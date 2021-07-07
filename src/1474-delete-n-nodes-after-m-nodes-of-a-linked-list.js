@@ -5,7 +5,7 @@ const moveTo = (node, steps) => {
     node = node.next;
   }
   return node;
-}
+};
 
 const deleteNodes = (head, m, n) => {
   if (head == null || m <= 0 || n <= 0) {

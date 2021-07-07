@@ -1,5 +1,4 @@
 class Node {
-
   constructor(val, neighbors) {
     this.val = val;
     this.neighbors = neighbors;
@@ -7,7 +6,6 @@ class Node {
 }
 
 const cloneGraph = (node) => {
-
   const clone = (node) => {
     if (!node) {
       return null;

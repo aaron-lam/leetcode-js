@@ -23,7 +23,7 @@ class Solution {
   constructor(nums) {
     this.nums = nums;
   }
-  
+
   pick(target) {
     let res = -1;
     let count = 0;

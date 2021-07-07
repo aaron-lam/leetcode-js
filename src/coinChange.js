@@ -10,8 +10,8 @@ const coinChange = (coins, amount) => {
         dp[i][t] = dp[i - 1][t];
       }
       if (t >= coins[i]) {
-        const combination1 = (coins[i] <= t) ? dp[i][t - coins[i]] + 1 : Number.MAX_VALUE;
-        const combination2 = (i > 0) ? dp[i - 1][t] : Number.MAX_VALUE;
+        const combination1 = coins[i] <= t ? dp[i][t - coins[i]] + 1 : Number.MAX_VALUE;
+        const combination2 = i > 0 ? dp[i - 1][t] : Number.MAX_VALUE;
         dp[i][t] = Math.min(combination1, combination2);
       }
     }

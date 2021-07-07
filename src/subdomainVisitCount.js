@@ -9,7 +9,7 @@ const subdomainVisits = (cpdomains) => {
     let subDomain = domainArr[1];
     while (subDomain) {
       map.set(subDomain, (map.get(subDomain) || 0) + num);
-      const idx = subDomain.indexOf('.');
+      const idx = subDomain.indexOf(".");
       if (idx === -1) {
         subDomain = null;
       } else {

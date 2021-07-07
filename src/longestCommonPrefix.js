@@ -1,6 +1,6 @@
 const longestCommonPrefix = (strs) => {
   if (!strs || !strs.length) {
-    return '';
+    return "";
   }
   let res = strs[0];
   for (let i = 1; i < strs.length; i++) {

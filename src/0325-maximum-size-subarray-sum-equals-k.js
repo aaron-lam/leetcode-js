@@ -2,7 +2,8 @@ const maxSubArrayLen = (nums, k) => {
   if (nums == null) {
     return k === 0 ? 1 : 0;
   }
-  let sum = 0, max = 0;
+  let sum = 0,
+    max = 0;
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];

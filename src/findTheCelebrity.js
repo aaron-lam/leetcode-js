@@ -1,8 +1,8 @@
 const knows = (i, j) => {
   const graph = [
-    [1,1,0],
-    [0,1,0],
-    [1,1,1]
+    [1, 1, 0],
+    [0, 1, 0],
+    [1, 1, 1],
   ];
   return Boolean(graph[i][j]);
 };
@@ -15,7 +15,7 @@ const findCelebrity = (n) => {
     }
   }
   for (let i = 0; i < res; i++) {
-    if (knows(res, i) || !(knows(i, res))) {
+    if (knows(res, i) || !knows(i, res)) {
       return -1;
     }
   }

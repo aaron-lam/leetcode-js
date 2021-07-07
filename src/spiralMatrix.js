@@ -3,8 +3,10 @@ const spiralOrder = (matrix) => {
     return [];
   }
   const res = [];
-  let rowStart = 0, rowEnd = matrix.length - 1;
-  let colStart = 0, colEnd = matrix[0].length - 1;
+  let rowStart = 0,
+    rowEnd = matrix.length - 1;
+  let colStart = 0,
+    colEnd = matrix[0].length - 1;
   while (rowStart <= rowEnd && colStart <= colEnd) {
     for (let i = colStart; i <= colEnd; i++) {
       res.push(matrix[rowStart][i]);

@@ -5,7 +5,7 @@ const minDominoRotations = (A, B) => {
   const aSwapB = Math.min(getMinSwap(A[0], A, B), getMinSwap(A[0], B, A));
   const bSwapA = Math.min(getMinSwap(B[0], A, B), getMinSwap(B[0], B, A));
   const res = Math.min(aSwapB, bSwapA);
-  return (res === Number.MAX_VALUE) ? -1 : res;
+  return res === Number.MAX_VALUE ? -1 : res;
 };
 
 const getMinSwap = (target, A, B) => {

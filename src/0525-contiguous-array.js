@@ -1,5 +1,5 @@
 const findMaxLength = (nums) => {
-  nums = nums.map((num) => num === 0 ? -1 : num);
+  nums = nums.map((num) => (num === 0 ? -1 : num));
   const map = new Map();
   map.set(0, -1);
   let sum = 0;

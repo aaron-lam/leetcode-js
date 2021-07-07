@@ -2,7 +2,8 @@ function search(nums, target) {
   if (!nums || !nums.length) {
     return false;
   }
-  let start = 0, end = nums.length - 1;
+  let start = 0,
+    end = nums.length - 1;
   while (start <= end) {
     const mid = Math.trunc((end - start) / 2) + start;
     if (nums[mid] == target) {

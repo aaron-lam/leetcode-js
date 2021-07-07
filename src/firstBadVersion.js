@@ -1,7 +1,8 @@
 function solution(isBadVersion) {
-
-  return function(n) {
-    let res = null, start = 0, end = n;
+  return function (n) {
+    let res = null,
+      start = 0,
+      end = n;
     while (start <= end) {
       const mid = Math.trunc((end - start) / 2) + start;
       if (isBadVersion(mid)) {
@@ -12,5 +13,5 @@ function solution(isBadVersion) {
       }
     }
     return res;
-  }
+  };
 }

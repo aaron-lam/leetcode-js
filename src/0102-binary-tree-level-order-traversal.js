@@ -42,10 +42,10 @@ const levelOrderBottom = (root) => {
     res[depth - level - 1].push(node.val);
     helper(node.left, level + 1, res);
     helper(node.right, level + 1, res);
-  }
+  };
 
   const res = [];
   const depth = maxDepth(root);
   helper(root, 0, res);
   return res;
-}
+};

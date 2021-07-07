@@ -10,8 +10,8 @@ const encode = (longUrl) => {
     return urlMap.get(longUrl);
   }
   const code = [...new Array(MAX_CHARS)]
-    .map(_ => Math.floor(Math.random() * CHAR_SET.length))
-    .map(i => CHAR_SET[i])
+    .map((_) => Math.floor(Math.random() * CHAR_SET.length))
+    .map((i) => CHAR_SET[i])
     .join("");
   urlMap.set(longUrl, code);
   codeMap.set(code, longUrl);

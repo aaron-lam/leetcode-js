@@ -19,4 +19,4 @@ const dfs = (s, word, res) => {
   } else {
     dfs(s.substring(1), word + s[0], res);
   }
-}
+};

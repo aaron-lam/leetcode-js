@@ -31,7 +31,7 @@ function ladderLength(beginWord, endWord, wordList) {
 
 const ladderLength = (beginWord, endWord, wordList) => {
   const dict = new Set(wordList);
-  if(!dict.has(endWord)) {
+  if (!dict.has(endWord)) {
     return 0;
   }
   let beginSet = new Set();

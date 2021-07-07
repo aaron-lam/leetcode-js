@@ -1,5 +1,6 @@
 const exist = (board, word) => {
-  const m = board.length, n = board[0].length;
+  const m = board.length,
+    n = board[0].length;
   const visited = new Array(m).fill(0).map(() => new Array(n).fill(false));
   const search = (i, j, idx) => {
     if (idx === word.length) {
@@ -9,7 +10,12 @@ const exist = (board, word) => {
       return false;
     }
     visited[i][j] = true;
-    if (search(i + 1, j, idx + 1) || search(i - 1, j, idx + 1) || search(i, j + 1, idx + 1) || search(i, j - 1, idx + 1)) {
+    if (
+      search(i + 1, j, idx + 1) ||
+      search(i - 1, j, idx + 1) ||
+      search(i, j + 1, idx + 1) ||
+      search(i, j - 1, idx + 1)
+    ) {
       return true;
     }
     visited[i][j] = false;

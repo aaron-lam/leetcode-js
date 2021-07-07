@@ -19,4 +19,4 @@ const traverse = (root, res, deleteSet, isRoot) => {
   root.left = traverse(root.left, res, deleteSet, shouldDelete);
   root.right = traverse(root.right, res, deleteSet, shouldDelete);
   return shouldDelete ? null : root;
-}
+};

@@ -19,8 +19,7 @@ const maximumGap = (nums) => {
   let maxGap = Number.MIN_VALUE;
   let prev = min;
   for (let i = 0; i < nums.length - 1; i++) {
-    if (bucketsMin[i] === Number.MAX_VALUE &&
-      bucketsMax[i] === Number.MIN_VALUE) {
+    if (bucketsMin[i] === Number.MAX_VALUE && bucketsMax[i] === Number.MIN_VALUE) {
       continue;
     }
     maxGap = Math.max(maxGap, bucketsMin[i] - prev);

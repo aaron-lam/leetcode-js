@@ -1,4 +1,9 @@
-const dirs = [[1,0],[0,1],[-1,0],[0,-1]];
+const dirs = [
+  [1, 0],
+  [0, 1],
+  [-1, 0],
+  [0, -1],
+];
 
 const numDistinctIslands = (grid) => {
   const set = new Set();
@@ -29,4 +34,4 @@ const dfs = (grid, i, j, x, y, path) => {
     }
     dfs(grid, newI, newJ, x + dx, y + dy, path);
   }
-}
+};

@@ -6,7 +6,7 @@ const reverse = (s, start, end) => {
     start += 1;
     end -= 1;
   }
-}
+};
 
 const reverseWords = (s) => {
   reverse(s, 0, s.length - 1);

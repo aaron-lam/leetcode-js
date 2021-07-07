@@ -2,7 +2,9 @@ const sortArrayByParityII = (A) => {
   if (!A || !A.length) {
     return A;
   }
-  let i = 0, j = 1, n = A.length;
+  let i = 0,
+    j = 1,
+    n = A.length;
   while (i < n && j < n) {
     while (i < n && A[i] % 2 === 0) {
       i += 2;

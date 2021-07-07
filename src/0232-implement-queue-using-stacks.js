@@ -3,16 +3,16 @@ class MyQueue {
     this.input = [];
     this.output = [];
   }
-  
+
   push(x) {
     this.input.push(x);
   }
-  
+
   pop() {
     this.peek();
     return this.output.pop();
   }
-  
+
   peek() {
     if (this.output.length === 0) {
       while (this.input.length > 0) {
@@ -21,7 +21,7 @@ class MyQueue {
     }
     return this.output[this.output.length - 1];
   }
-  
+
   empty() {
     return this.input.length === 0 && this.output.length === 0;
   }

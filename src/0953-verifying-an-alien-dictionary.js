@@ -24,4 +24,4 @@ const isGreater = (word1, word2, rank) => {
     }
   }
   return m > n;
-}
+};

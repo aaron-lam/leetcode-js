@@ -11,7 +11,7 @@ const lengthOfLongestSubstring = (s) => {
     res = Math.max(res, end - start + 1);
   }
   return res;
-}
+};
 
 // Solution 2: using Array.reduce()
 const lengthOfLongestSubstring2 = (s) => {
@@ -20,7 +20,7 @@ const lengthOfLongestSubstring2 = (s) => {
   }
   let start = 0;
   const map = {};
-  return s.split('').reduce((maxLen, c, i) => {
+  return s.split("").reduce((maxLen, c, i) => {
     if (c in map) {
       start = Math.max(start, map[c] + 1);
     }

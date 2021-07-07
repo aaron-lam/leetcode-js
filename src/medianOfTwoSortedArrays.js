@@ -9,10 +9,10 @@ const findMedianSortedArrays = (nums1, nums2) => {
   while (start <= end) {
     let i = Math.trunc((start + end) / 2);
     let j = Math.trunc((m + n + 1) / 2) - i;
-    let maxLeftX = (i === 0) ? Number.NEGATIVE_INFINITY : nums1[i - 1];
-    let minRightX = (i === m) ? Number.POSITIVE_INFINITY : nums1[i];
-    let maxLeftY = (j === 0) ? Number.NEGATIVE_INFINITY : nums2[j - 1];
-    let minRightY = (j === n) ? Number.POSITIVE_INFINITY : nums2[j];
+    let maxLeftX = i === 0 ? Number.NEGATIVE_INFINITY : nums1[i - 1];
+    let minRightX = i === m ? Number.POSITIVE_INFINITY : nums1[i];
+    let maxLeftY = j === 0 ? Number.NEGATIVE_INFINITY : nums2[j - 1];
+    let minRightY = j === n ? Number.POSITIVE_INFINITY : nums2[j];
     if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
       if ((m + n) % 2 === 0) {
         return (Math.max(maxLeftX, maxLeftY) + Math.min(minRightX, minRightY)) / 2;
@@ -42,12 +42,12 @@ const getMedian = (sortedNums) => {
     return sortedNums[0];
   }
   const medianIndex = Math.floor(sortedNums.length / 2);
-  return isOdd(sortedNums.length) ?
-    sortedNums[medianIndex] :
-    (sortedNums[medianIndex - 1] + sortedNums[medianIndex]) / 2;
-}
+  return isOdd(sortedNums.length)
+    ? sortedNums[medianIndex]
+    : (sortedNums[medianIndex - 1] + sortedNums[medianIndex]) / 2;
+};
 
-const findMedianSortedArrays = function(nums1, nums2) {
+const findMedianSortedArrays = function (nums1, nums2) {
   if (isNullOrEmpty(nums1) && isNullOrEmpty(nums2)) {
     throw new Error("Both arrays are empty.");
   }
@@ -62,7 +62,7 @@ const findMedianSortedArrays = function(nums1, nums2) {
   } else {
     return findKthNumber(nums1, 0, nums2, 0, Math.floor(totalLen / 2) + 1);
   }
-}
+};
 
 const findKthNumber = (nums1, i, nums2, j, k) => {
   if (nums1.length - i > nums2.length - j) {
@@ -80,4 +80,4 @@ const findKthNumber = (nums1, i, nums2, j, k) => {
     return findKthNumber(nums1, i, nums2, medianIndex2, k - (medianIndex2 - j));
   }
   return findKthNumber(nums1, medianIndex1, nums2, j, k - (medianIndex1 - i));
-}
+};

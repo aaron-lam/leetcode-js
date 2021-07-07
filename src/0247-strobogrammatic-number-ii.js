@@ -19,4 +19,4 @@ const dfs = (curLen, n) => {
     res.push("9" + num + "6");
   }
   return res;
-}
+};

@@ -22,7 +22,7 @@ const maxSlidingWindow = (nums, k) => {
   let j = 0;
   nums.forEach((num, i) => {
     queue.add(num);
-    if (i >= (k - 1)) {
+    if (i >= k - 1) {
       res.push(queue[0]);
       queue.remove(nums[j]);
       j += 1;

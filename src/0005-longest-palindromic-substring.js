@@ -1,5 +1,4 @@
 const longestPalindrome = (s) => {
-
   const updateLongestPalindromeLength = (start, end) => {
     while (start >= 0 && end < s.length && s[start] === s[end]) {
       start -= 1;

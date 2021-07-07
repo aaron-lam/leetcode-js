@@ -1,5 +1,4 @@
 class MyStack {
-
   constructor() {
     this.queue = [];
   }

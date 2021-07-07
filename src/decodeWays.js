@@ -4,7 +4,7 @@ const numDecodings = (s) => {
   }
   const dp = new Array(s.length + 1).fill(0);
   dp[0] = 1;
-  dp[1] = (s[0] !== "0") ? 1 : 0;
+  dp[1] = s[0] !== "0" ? 1 : 0;
   for (let i = 2; i <= s.length; i++) {
     const first = Number(s.substring(i - 1, i));
     const second = Number(s.substring(i - 2, i));

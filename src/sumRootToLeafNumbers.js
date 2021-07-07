@@ -10,8 +10,7 @@ const traverse = (root, sum) => {
   if (!root.left && !root.right) {
     return sum * 10 + root.val;
   }
-  return traverse(root.left, sum * 10 + root.val) +
-    traverse(root.right, sum * 10 + root.val);
+  return traverse(root.left, sum * 10 + root.val) + traverse(root.right, sum * 10 + root.val);
 };
 
 // iterative bfs

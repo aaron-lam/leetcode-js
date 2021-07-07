@@ -1,7 +1,8 @@
 const isNumber = (c) => c >= "0" && c <= "9";
 
 const validWordAbbreviation = (word, abbr) => {
-  let i = 0, j = 0;
+  let i = 0,
+    j = 0;
   while (i < word.length && j < abbr.length) {
     if (word[i] === abbr[j]) {
       i += 1;

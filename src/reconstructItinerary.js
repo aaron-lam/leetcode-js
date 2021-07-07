@@ -1,5 +1,4 @@
 class PriorityQueue {
-
   constructor(compare) {
     this.data = [];
     this.compare = compare;

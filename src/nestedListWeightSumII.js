@@ -20,4 +20,4 @@ const depthSumInverse = (nestedList) => {
   return res;
 };
 
-console.log(depthSumInverse([1,[4,[6]]]));
+console.log(depthSumInverse([1, [4, [6]]]));

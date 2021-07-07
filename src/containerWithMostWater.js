@@ -15,7 +15,9 @@
 // };
 
 const maxArea = (height) => {
-  let maxArea = 0, left = 0, right = height.length;
+  let maxArea = 0,
+    left = 0,
+    right = height.length;
   while (left < right) {
     const curWidth = right - left;
     const curHeight = Math.min(height[left], height[right]);
@@ -30,4 +32,4 @@ const maxArea = (height) => {
   return maxArea;
 };
 
-console.log(maxArea([1,8,6,2,5,4,8,3,7]));
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));

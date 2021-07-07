@@ -4,7 +4,8 @@ const sortedSquares = (A) => {
   }
   const n = A.length;
   const res = new Array(n);
-  let start = 0, end = n - 1;
+  let start = 0,
+    end = n - 1;
   for (let i = n - 1; i >= 0; i--) {
     if (Math.abs(A[start]) > Math.abs(A[end])) {
       res[i] = A[start] * A[start];

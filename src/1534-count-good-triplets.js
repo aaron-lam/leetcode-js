@@ -1,10 +1,12 @@
 const isAbsDiffNotGreaterThan = (a, b, target) => Math.abs(a - b) <= target;
 
 const isGoodTriplet = (arr, i, j, k, a, b, c) => {
-  return isAbsDiffNotGreaterThan(arr[i], arr[j], a)
-    && isAbsDiffNotGreaterThan(arr[j], arr[k], b)
-    && isAbsDiffNotGreaterThan(arr[i], arr[k], c)
-}
+  return (
+    isAbsDiffNotGreaterThan(arr[i], arr[j], a) &&
+    isAbsDiffNotGreaterThan(arr[j], arr[k], b) &&
+    isAbsDiffNotGreaterThan(arr[i], arr[k], c)
+  );
+};
 
 // Solution 1: Brute force
 const countGoodTriplets = (arr, a, b, c) => {
@@ -36,8 +38,7 @@ const countGoodTriplets = (arr, a, b, c) => {
         continue;
       }
       for (let k = j + 1; k < arr.length; k++) {
-        if (isAbsDiffNotGreaterThan(arr[j], arr[k], b)
-          && isAbsDiffNotGreaterThan(arr[i], arr[k], c)) {
+        if (isAbsDiffNotGreaterThan(arr[j], arr[k], b) && isAbsDiffNotGreaterThan(arr[i], arr[k], c)) {
           numOfGoodTriplets += 1;
         }
       }

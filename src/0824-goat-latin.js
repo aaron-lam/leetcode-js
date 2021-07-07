@@ -4,12 +4,14 @@ const toGoatLatin = (S) => {
   }
   const words = S.split(" ");
   const vowels = "aeiouAEIOU".split("");
-  return words.map((word, index) => {
-    if (!vowels.includes(word[0])) {
-      const conosant = word[0];
-      word = word.slice(1) + conosant;
-    }
-    word += "ma" + "a".repeat(index + 1);
-    return word;
-  }).join(" ");
+  return words
+    .map((word, index) => {
+      if (!vowels.includes(word[0])) {
+        const conosant = word[0];
+        word = word.slice(1) + conosant;
+      }
+      word += "ma" + "a".repeat(index + 1);
+      return word;
+    })
+    .join(" ");
 };

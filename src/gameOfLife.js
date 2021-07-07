@@ -7,9 +7,14 @@ const gameOfLife = (board) => {
   const LIVE_TO_DEAD = 2;
   const REBORN = 3;
   const dirs = [
-    [-1, -1], [0, -1], [1, -1],
-    [-1, 0], [1, 0],
-    [-1, 1], [0, 1], [1, 1]
+    [-1, -1],
+    [0, -1],
+    [1, -1],
+    [-1, 0],
+    [1, 0],
+    [-1, 1],
+    [0, 1],
+    [1, 1],
   ];
 
   const countLiveNeighbor = (i, j) => {
@@ -17,8 +22,13 @@ const gameOfLife = (board) => {
     for (const [x, y] of dirs) {
       let newI = i + x;
       let newJ = j + y;
-      if (newI >= 0 && newI < m && newJ >= 0 && newJ < n &&
-        (board[newI][newJ] === 1 || board[newI][newJ] === LIVE_TO_DEAD)) {
+      if (
+        newI >= 0 &&
+        newI < m &&
+        newJ >= 0 &&
+        newJ < n &&
+        (board[newI][newJ] === 1 || board[newI][newJ] === LIVE_TO_DEAD)
+      ) {
         counts += 1;
       }
     }

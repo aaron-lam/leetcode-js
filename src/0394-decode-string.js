@@ -8,7 +8,7 @@ const decodeString = (s) => {
   let curNum = 0;
   let curStr = "";
   for (const c of s.split("")) {
-    if (c === '[') {
+    if (c === "[") {
       stack.push([curStr, curNum]);
       curStr = "";
       curNum = 0;
@@ -22,4 +22,4 @@ const decodeString = (s) => {
     }
   }
   return curStr;
-}
+};

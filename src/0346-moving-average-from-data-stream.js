@@ -4,7 +4,7 @@ class MovingAverage {
     this.sum = 0;
     this.size = size;
   }
-  
+
   next(val) {
     if (this.q.length === this.size) {
       this.sum -= this.q.shift();

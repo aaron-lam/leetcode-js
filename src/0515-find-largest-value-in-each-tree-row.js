@@ -14,4 +14,4 @@ const dfs = (root, res, depth) => {
   res[depth].push(root.val);
   dfs(root.left, res, depth + 1);
   dfs(root.right, res, depth + 1);
-}
+};

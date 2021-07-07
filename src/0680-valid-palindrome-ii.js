@@ -13,4 +13,4 @@ const isPalindrome = (s, start, end, isDeleted) => {
     }
   }
   return true;
-}
+};

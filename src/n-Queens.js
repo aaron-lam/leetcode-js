@@ -1,8 +1,5 @@
 function solveNQueens(n) {
-  const board = new Array(n)
-    .fill(0)
-    .map(() => new Array(n)
-      .fill('.'));
+  const board = new Array(n).fill(0).map(() => new Array(n).fill("."));
   const res = [];
 
   function dfs(colIdx) {
@@ -12,9 +9,9 @@ function solveNQueens(n) {
     }
     for (let i = 0; i < board.length; i++) {
       if (validate(i, colIdx)) {
-        board[i][colIdx] = 'Q';
+        board[i][colIdx] = "Q";
         dfs(colIdx + 1);
-        board[i][colIdx] = '.';
+        board[i][colIdx] = ".";
       }
     }
   }
@@ -22,7 +19,7 @@ function solveNQueens(n) {
   function validate(x, y) {
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < y; j++) {
-        if (board[i][j] == 'Q' && (x + j == y + i || x + y == i + j || x == i)) {
+        if (board[i][j] == "Q" && (x + j == y + i || x + y == i + j || x == i)) {
           return false;
         }
       }
@@ -37,7 +34,7 @@ function solveNQueens(n) {
 function construct(board) {
   const res = [];
   for (let i = 0; i < board.length; i++) {
-    res.push(board[i].join(''));
+    res.push(board[i].join(""));
   }
   return res;
 }

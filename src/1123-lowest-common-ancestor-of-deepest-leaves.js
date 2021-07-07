@@ -12,6 +12,6 @@ const lcaDeepestLeaves = (root) => {
       return [depth2 + 1, node2];
     }
     return [depth1 + 1, root];
-  }
+  };
   return traverse(root)[1];
 };

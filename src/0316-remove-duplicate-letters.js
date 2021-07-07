@@ -11,9 +11,7 @@ const removeDuplicateLetters = (s) => {
     if (isVisited.has(c)) {
       continue;
     }
-    while (stack.length > 0 
-           && c < stack[stack.length - 1]
-           && freqCounts.get(stack[stack.length - 1]) !== 0) {
+    while (stack.length > 0 && c < stack[stack.length - 1] && freqCounts.get(stack[stack.length - 1]) !== 0) {
       isVisited.delete(stack.pop());
     }
     stack.push(c);
