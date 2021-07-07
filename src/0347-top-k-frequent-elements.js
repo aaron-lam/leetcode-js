@@ -1,3 +1,5 @@
+import { MinPriorityQueue } from '@datastructures-js/priority-queue';
+
 const topKFrequent = (nums, k) => {
   const pq = new MinPriorityQueue({ priority: (entry) => entry[1] });
   const map = new Map();

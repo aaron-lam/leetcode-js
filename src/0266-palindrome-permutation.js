@@ -4,11 +4,11 @@ const canPermutePalindrome = (s) => {
     return true;
   }
   const map = new Map();
-  for (c of s.split("")) {
+  for (const c of s.split("")) {
     map.set(c, (map.get(c) ?? 0) + 1);
   }
   let hasOddOccurrence = false;
-  for (c of map.keys()) {
+  for (const c of map.keys()) {
     if (map.get(c) % 2 !== 0) {
       if (hasOddOccurrence) {
         return false;

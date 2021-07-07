@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "lint": "eslint . --fix --max-warnings=0"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "prettier": "2.3.2"
+  },
+  "dependencies": {
+    "@datastructures-js/priority-queue": "^5.1.1"
+  }
+}

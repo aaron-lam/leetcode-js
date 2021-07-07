@@ -1,3 +1,5 @@
+import { MinPriorityQueue } from "@datastructures-js/priority-queue";
+
 const diagonalSort = (mat) => {
   if (mat == null || mat.length === 0 || mat[0].length === 0) {
     return mat;

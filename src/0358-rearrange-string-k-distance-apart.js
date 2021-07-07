@@ -1,3 +1,5 @@
+import { MaxPriorityQueue } from "@datastructures-js/priority-queue";
+
 const rearrangeString = (s, k) => {
   const res = [];
   const map = new Map();

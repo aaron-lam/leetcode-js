@@ -1,19 +1,13 @@
 const isStrobogrammatic = (num) => {
-  if (num == null || num.length === 0) {
-    return true;
-  }
-  const map = {
-    "6": "9",
-    "9": "6",
-    "0": "0",
-    "1": "1",
-    "8": "8",
-  }
+  const map = new Map();
+  map.set("0", "0");
+  map.set("1", "1");
+  map.set("8", "8");
+  map.set("6", "9");
+  map.set("9", "6");
   let start = 0, end = num.length - 1;
   while (start <= end) {
-    const digit1 = num.charAt(start);
-    const digit2 = num.charAt(end);
-    if (!map[digit1] || (map[digit1] !== digit2)) {
+    if (!map.has(num[start]) || map.get(num[start]) !== num[end]) {
       return false;
     }
     start += 1;

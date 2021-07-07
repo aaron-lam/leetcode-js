@@ -1,3 +1,5 @@
+import TreeNode from "./data-strucutures/tree-node";
+
 // recursive
 const insertIntoBST = (root, val) => {
   if (!root) {

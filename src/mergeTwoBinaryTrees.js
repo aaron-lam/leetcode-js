@@ -1,3 +1,5 @@
+import TreeNode from "./data-strucutures/tree-node";
+
 const mergeTrees = (t1, t2) => {
   if (!t1 && !t2) {
     return null;

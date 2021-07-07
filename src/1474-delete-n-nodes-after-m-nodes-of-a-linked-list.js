@@ -1,3 +1,5 @@
+import ListNode from "./data-strucutures/node";
+
 const moveTo = (node, steps) => {
   for (let i = 0; i < steps && node != null; i++) {
     node = node.next;

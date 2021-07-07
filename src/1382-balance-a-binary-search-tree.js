@@ -1,3 +1,5 @@
+import TreeNode from "./data-strucutures/tree-node";
+
 const balanceBST = (root) => {
   if (root == null) {
     return null;

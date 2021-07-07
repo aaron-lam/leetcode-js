@@ -34,5 +34,3 @@ const mySqrt = (n, epsilon) => {
   }
   return x.toFixed();
 };
-
-console.log(mySqrt(8, 0.01));

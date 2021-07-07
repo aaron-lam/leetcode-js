@@ -1,3 +1,5 @@
+import Node from "./data-strucutures/node";
+
 const copyRandomList = (head) => {
   const map = new Map();
   for (let cur = head; cur != null; cur = cur.next) {

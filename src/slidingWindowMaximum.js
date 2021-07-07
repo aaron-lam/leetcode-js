@@ -1,17 +1,16 @@
 class MonotonicQueue extends Array {
-
   add(n) {
     while (this.length > 0 && n > this[this.length - 1]) {
       this.pop();
     }
     this.push(n);
-  };
+  }
 
   remove(n) {
     if (n === this[0]) {
       this.shift();
     }
-  };
+  }
 }
 
 const maxSlidingWindow = (nums, k) => {

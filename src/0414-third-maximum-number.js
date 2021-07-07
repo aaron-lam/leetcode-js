@@ -5,7 +5,7 @@ const thirdMax = (nums) => {
   let max = null;
   let secondMax = null;
   let thirdMax = null;
-  for (num of nums) {
+  for (const num of nums) {
     if (num === max || num === secondMax || num === thirdMax) {
       continue;
     }

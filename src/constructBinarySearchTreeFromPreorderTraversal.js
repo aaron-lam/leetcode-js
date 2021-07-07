@@ -1,3 +1,5 @@
+import TreeNode from "./data-strucutures/tree-node";
+
 const bstFromPreorder = (preorder) => {
   let i = 0;
 

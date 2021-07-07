@@ -11,7 +11,7 @@ const canPartition = (nums) => {
   const dp = new Array(sum + 1).fill(false);
   dp[0] = true;
   for (let i = 0; i < n; i++) {
-    for (let s = sum; s > 0; s--) {ƒ
+    for (let s = sum; s > 0; s--) {
       if (s >= nums[i]) {
         dp[s] = dp[s] || dp[s - nums[i]];
       }

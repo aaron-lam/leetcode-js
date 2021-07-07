@@ -7,7 +7,7 @@ const decodeString = (s) => {
   const stack = [];
   let curNum = 0;
   let curStr = "";
-  for (c of s.split("")) {
+  for (const c of s.split("")) {
     if (c === '[') {
       stack.push([curStr, curNum]);
       curStr = "";
