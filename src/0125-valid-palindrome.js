@@ -1,8 +1,10 @@
-const isAlphanumeric = (c) => c.match(/^[0-9a-zA-Z]+$/);
+const isAlphanumeric = (c) => c.match(/^[a-zA-Z0-9]$/);
 
 const isPalindrome = (s) => {
-  let start = 0;
-  let end = s.length - 1;
+  if (s == null || s.length === 0) {
+    return true;
+  }
+  let start = 0, end = s.length - 1;
   while (start < end) {
     while (start < end && !isAlphanumeric(s[start])) {
       start += 1;
