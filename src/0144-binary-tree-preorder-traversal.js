@@ -9,7 +9,7 @@ const preorder = (root, res) => {
   if (!root) {
     return;
   }
-  res.add(root.val);
+  res.push(root.val);
   preorder(root.left, res);
   preorder(root.right, res);
 };

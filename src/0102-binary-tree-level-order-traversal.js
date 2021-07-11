@@ -1,5 +1,5 @@
 // BFS approach
-const levelOrder = (root) => {
+const levelOrder = function(root) {
   if (root == null) {
     return [];
   }
@@ -24,28 +24,20 @@ const levelOrder = (root) => {
 };
 
 // DFS approach
-const levelOrderBottom = (root) => {
-  const maxDepth = (root) => {
-    if (root == null) {
-      return 0;
-    }
-    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
-  };
-
-  const helper = (node, level, res) => {
-    if (node == null) {
-      return;
-    }
-    if (res[depth - level - 1] == null) {
-      res[depth - level - 1] = [];
-    }
-    res[depth - level - 1].push(node.val);
-    helper(node.left, level + 1, res);
-    helper(node.right, level + 1, res);
-  };
-
+const levelOrder = function(root) {
   const res = [];
-  const depth = maxDepth(root);
-  helper(root, 0, res);
+  dfs(root, res, 0);
   return res;
+};
+
+const dfs = (root, res, index) => {
+  if (root == null) {
+    return;
+  }
+  if (res.length === index) {
+    res.push([]);
+  }
+  res[index].push(root.val);
+  dfs(root.left, res, index + 1);
+  dfs(root.right, res, index + 1);
 };
