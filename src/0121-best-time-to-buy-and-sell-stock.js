@@ -1,15 +1,9 @@
 const maxProfit = (prices) => {
-  if (prices == null || prices.length < 2) {
-    return 0;
+  let res = 0;
+  let lowestBuyPrice = prices[0];
+  for (const price of prices) {
+    lowestBuyPrice = Math.min(lowestBuyPrice, price);
+    res = Math.max(res, price - lowestBuyPrice);
   }
-  let maxProfit = 0,
-    minPrice = prices[0];
-  prices.forEach((price, i) => {
-    if (price > prices[i - 1]) {
-      maxProfit = Math.max(maxProfit, price - minPrice);
-    } else {
-      minPrice = Math.min(minPrice, price);
-    }
-  });
-  return maxProfit;
+  return res;
 };
