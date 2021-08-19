@@ -1,20 +1,13 @@
 const lengthOfLongestSubstringKDistinct = (s, k) => {
-  if (k === 0) {
-    return 0;
-  }
   const map = new Map();
-  let counter = 0;
   let start = 0;
   let res = 0;
   for (let end = 0; end < s.length; end++) {
     map.set(s[end], (map.get(s[end]) ?? 0) + 1);
-    if (map.get(s[end]) === 1) {
-      counter += 1;
-    }
-    while (counter > k) {
+    while (map.size > k) {
       map.set(s[start], map.get(s[start]) - 1);
       if (map.get(s[start]) === 0) {
-        counter -= 1;
+        map.delete(s[start]);
       }
       start += 1;
     }

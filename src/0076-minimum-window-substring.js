@@ -1,27 +1,28 @@
 const minWindow = (s, t) => {
   const map = new Map();
-  for (const c of t.split("")) {
+  for (const c of t) {
     map.set(c, (map.get(c) ?? 0) + 1);
   }
-  let len = Number.POSITIVE_INFINITY;
-  let startIdx = 0;
-  let charsCovered = 0;
-  for (let end = 0, start = 0; end < s.length; end++) {
+  let count = t.length;
+  let start = 0;
+  let resStart = 0;
+  let resLen = Number.POSITIVE_INFINITY;
+  for (let end = 0; end < s.length; end++) {
     map.set(s[end], (map.get(s[end]) ?? 0) - 1);
     if (map.get(s[end]) >= 0) {
-      charsCovered += 1;
+      count -= 1;
     }
-    while (charsCovered === t.length) {
-      if (len > end - start + 1) {
-        len = end - start + 1;
-        startIdx = start;
+    while (count === 0) {
+      if (end - start + 1 < resLen) {
+        resLen = end - start + 1;
+        resStart = start;
       }
-      map.set(s[start], (map.get(s[start]) ?? 0) + 1);
-      if (map.get(s[start]) >= 1) {
-        charsCovered -= 1;
+      map.set(s[start], map.get(s[start]) + 1);
+      if (map.get(s[start]) > 0) {
+        count += 1;
       }
       start += 1;
     }
   }
-  return len === Number.POSITIVE_INFINITY ? "" : s.substring(startIdx, startIdx + len);
+  return resLen === Number.POSITIVE_INFINITY ? "" : s.substring(resStart, resStart + resLen);
 };

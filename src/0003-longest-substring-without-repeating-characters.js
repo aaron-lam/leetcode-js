@@ -4,11 +4,12 @@ const lengthOfLongestSubstring = (s) => {
   let start = 0;
   let res = 0;
   for (let end = 0; end < s.length; end++) {
-    if (map.has(s[end])) {
-      start = Math.max(start, map.get(s[end]) + 1);
+    map.set(s[end], (map.get(s[end]) ?? 0) + 1);
+    while (map.get(s[end]) > 1) {
+      map.set(s[start], map.get(s[start]) - 1);
+      start += 1;
     }
     res = Math.max(res, end - start + 1);
-    map.set(s[end], end);
   }
   return res;
 };
