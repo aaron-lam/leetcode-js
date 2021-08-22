@@ -1,21 +1,21 @@
 // BFS approach
-const levelOrder = function(root) {
+const levelOrder = (root) => {
   if (root == null) {
     return [];
   }
   const res = [];
-  const queue = [root];
-  while (queue.length > 0) {
-    let len = queue.length;
+  const q = [root];
+  while (q.length > 0) {
     const list = [];
-    for (let i = 0; i < len; i++) {
-      const node = queue.shift();
+    const size = q.length;
+    for (let i = 0; i < size; i++) {
+      const node = q.shift();
       list.push(node.val);
       if (node.left != null) {
-        queue.push(node.left);
+        q.push(node.left);
       }
       if (node.right != null) {
-        queue.push(node.right);
+        q.push(node.right);
       }
     }
     res.push(list);
@@ -24,7 +24,7 @@ const levelOrder = function(root) {
 };
 
 // DFS approach
-const levelOrder = function(root) {
+const levelOrder = (root) => {
   const res = [];
   dfs(root, res, 0);
   return res;

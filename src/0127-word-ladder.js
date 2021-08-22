@@ -1,33 +1,38 @@
-function ladderLength(beginWord, endWord, wordList) {
-  let len = 1;
-  let q = [beginWord];
-  const dict = new Set(wordList);
+// Solution 1: BFS
+const ladderLength = (beginWord, endWord, wordList) => {
   const visited = new Set();
-  visited.add(beginWord);
-  while (q.length) {
-    const nextLevel = [];
-    for (const word of q) {
-      if (word == endWord) {
-        return len;
+  const wordSet = new Set(wordList);
+  const q = [beginWord];
+  let res = 1;
+  while (q.length > 0) {
+    const size = q.length;
+    for (let i = 0; i < size; i++) {
+      const word = q.shift();
+      if (word === endWord) {
+        return res;
       }
-      const splitWord = word.split("");
-      for (let i = 0; i < splitWord.length; i++) {
+      for (let i = 0; i < word.length; i++) {
+        const wordArr = word.split("");
         for (let c = 0; c < 26; c++) {
-          splitWord[i] = String.fromCharCode(97 + c);
-          const joinWord = splitWord.join("");
-          if (!visited.has(joinWord) && dict.has(joinWord)) {
-            nextLevel.push(joinWord);
-            visited.add(joinWord);
+          const originalChar = wordArr[i];
+          const newChar = String.fromCharCode(97 + c);
+          if (originalChar === newChar) {
+            continue;
           }
-          splitWord[i] = word[i];
+          wordArr[i] = newChar;
+          const nextWord = wordArr.join("");
+          if (!visited.has(nextWord) && wordSet.has(nextWord)) {
+            visited.add(nextWord);
+            q.push(nextWord);
+          }
+          wordArr[i] = originalChar;
         }
       }
     }
-    q = nextLevel;
-    len += 1;
+    res += 1;
   }
   return 0;
-}
+};
 
 const ladderLength = (beginWord, endWord, wordList) => {
   const dict = new Set(wordList);
